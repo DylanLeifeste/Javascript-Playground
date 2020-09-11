@@ -19,6 +19,17 @@ function punch(){
 }
 function textUpdate(){
     document.getElementById("punches").innerHTML=x+" Punches";
-
 }
 
+let peterPunch = document.getElementById("peterPunch");
+let punchButton = document.getElementById("punchButton");
+
+    function changeImg() {
+        if (peterPunch.getAttribute('src') === "./Images/peter-punch.png") {
+            peterPunch.setAttribute('src', "./Images/peter-punched.png");
+        } else {
+            peterPunch.setAttribute('src', "./Images/peter-punch.png")
+        }
+    }
+
+    punchButton.addEventListener("click", changeImg);
