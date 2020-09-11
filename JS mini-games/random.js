@@ -2,13 +2,7 @@
 
 alert("a game in progress with much more work to come");
 
-// document.getElementById("image").onclick = function() {
-//     if(this.src === "peter-punch.png"){
-//         this.src = "peter-punched.png";
-//     } else {
-//         this.src = "peter-punch.png";
-//     }
-// };
+// ----------------------------------------punching game-----------------------------------------
 
 var x=0;
 var lv=1;
@@ -33,3 +27,5 @@ let punchButton = document.getElementById("punchButton");
     }
 
     punchButton.addEventListener("click", changeImg);
+
+    // ---------------------------------------snake game------------------------------------------------
