@@ -166,6 +166,26 @@
         }
     }
 
+    document.onkeydown = cancelArrowKeys;
+
+
+
+
+    function cancelArrowKeys(e) {
+        try {
+            var e = window.event || e;
+
+            var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+
+            if (key === 37 || key === 38 || key === 39 || key === 40 || key === 13) {
+                    event.returnValue = false;
+            }
+        }
+        catch (Exception) {
+            return false;
+        }
+    }
+
     function moveSnake() {
         const head = {x: snake[0].x + dx, y: snake[0].y + dy};
 
